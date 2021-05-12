@@ -1,0 +1,50 @@
+nav{
+	display: block;
+	position: fixed;
+	box-sizing: border-box;
+	background: black;
+	color: white;
+	top: 0;
+	right: calc(-50vw + 3em);
+	z-index: 9000;
+	padding: 0 0 0 3em;;
+	width: 50vw;
+	height: 100vh;
+	transition: right 1s;
+}
+
+
+nav *:last-child::before{
+	content: "\2630";
+	position: absolute;
+	top: calc(50vh - 1em);
+	left: 1em;
+	margin-left: -1em;
+	font-size: 2em;
+	cursor: pointer;
+	clear: both;
+}
+
+
+nav[data-toggle="open"]{
+	right: 0;
+}
+
+nav[data-toggle="open"] *:last-child::before{
+	content: "\00D7";
+}
+
+nav a{
+	position: relative;
+	display: block;
+	font-family: arial;
+	font-size: 1cm;
+	text-decoration: none;
+	padding: .5em 2em;
+	color: red;
+}
+
+nav a:hover{
+	color: black;
+	background: red;
+}
